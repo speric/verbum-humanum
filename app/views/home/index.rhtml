@@ -1,0 +1,7 @@
+<% form_tag('/home/search') do %>
+  <p>
+    <label>Book Name</label><br/>
+    <%= text_field_tag 'search_term', 'Book name' %>
+  </p>
+  <%= submit_tag 'Search' %>
+<% end %>
