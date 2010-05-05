@@ -1,9 +1,6 @@
 class ReadingPlansController < ApplicationController
   before_filter :find_item, :only => [:new, :create]
-  
-  def new
-  end
-  
+    
   def create
     @reading_plan = ReadingPlan.new(params[:reading_plan])
     if request.post? and @reading_plan.save
