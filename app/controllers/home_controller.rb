@@ -17,4 +17,8 @@ class HomeController < ApplicationController
       redirect_to :action => "viewplan", :id => @reading_plan.id
     end
   end
+  
+  def viewplan
+    @plan = ReadingPlan.find(params[:id])
+  end
 end

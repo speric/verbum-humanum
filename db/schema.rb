@@ -11,13 +11,4 @@
 
 ActiveRecord::Schema.define(:version => 20100505144033) do
 
-  create_table "reading_plans", :force => true do |t|
-    t.integer  "amazon_asin"
-    t.integer  "duration_count"
-    t.integer  "duration_multiplier"
-    t.string   "creator",             :limit => 30, :default => "", :null => false
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
 end
