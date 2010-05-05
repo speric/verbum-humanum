@@ -1,4 +1,4 @@
  <% @items.items.each do |item| %>
   <% att = item.search_and_convert('itemattributes') %>
-  <p><%=  item.get('asin') %> - <%= att.get('title') %> - <%= att.get('author') %></p>
+  <p><a href="/home/book/<%=  item.get('asin') %>"><%= att.get('title') %> - <%= att.get('author') %></a></p>
  <% end %>
