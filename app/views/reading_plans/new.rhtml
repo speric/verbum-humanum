@@ -1,0 +1,19 @@
+<%= render :partial => "shared/book_data" %>
+
+<%=  error_messages_for 'reading_plan' %>
+
+<% form_for :reading_plan, @reading_plan, :url => { :action => :create, :id => @item.first_item.get('asin')} do |f| %>
+  <p><label>Duration</label><br/>
+    <%= f.text_field :duration_count, {:size => 3} %> 
+    <select name="reading_plan[duration_multiplier"] id="reading_plan_duration_multiplier">
+      <%= options_for_select([["Days", "1"], ["Week(s)", "7"], ["Month(s)", "30"], ["Years(s)", "365"]]) %>
+    </select>
+  </p>
+  
+  <p><label>Your Name</label><br/><%= f.text_field :creator %></p>
+  <%= f.hidden_field :amazon_asin, {:value => @item.first_item.get('asin') } %> 
+  <%= f.hidden_field :book_author, {:value => @item.first_item.get('title') } %> 
+  <%= f.hidden_field :book_title, {:value => @item.first_item.get('author') } %> 
+  <%= f.hidden_field :page_count, {:value => @item.first_item.get('numberofpages') } %> 
+  <%= submit_tag 'Create' %>
+<% end %>

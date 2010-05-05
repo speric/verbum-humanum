@@ -1,0 +1,18 @@
+<p><%= @reading_plan.book_title %></p>
+<p><%= @reading_plan.book_author %></p>
+<p><%= @reading_plan.page_count %></p>
+
+<p>Created by <%= @reading_plan.creator %></p>
+
+<p><%= pluralize(@reading_plan.duration_count, @reading_plan.duration) %></p>
+<p>Approx. Pages Per Day: <%= @reading_plan.pages_per_day %></p>
+
+<% day_count = 1 %>
+<% page_count = 1 %>
+
+<% while page_count <= @reading_plan.page_count %>
+  <% next_page = (page_count + @reading_plan.pages_per_day)  %>
+  Day <%= day_count %>: <%= page_count %> - <%= (next_page > @reading_plan.page_count ? @reading_plan.page_count : next_page) %><br/>
+  <% day_count += 1 %>
+  <% page_count = next_page + 1%>
+<% end %>

@@ -1,0 +1,8 @@
+<%= render :partial => "shared/book_data" %>
+
+<p>Reading Plans</p>
+<% @plans.each do |p| %>
+  <p><%= p.id %></p>
+<% end %>
+
+<a href="<%= new_reading_plan_path(:id => @item.first_item.get('asin')) %>">Create A New Reading Plan</a> 

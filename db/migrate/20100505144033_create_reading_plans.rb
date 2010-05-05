@@ -5,6 +5,7 @@ class CreateReadingPlans < ActiveRecord::Migration
       t.integer       :amazon_asin
       t.string         :book_title
       t.string         :book_author
+      t.integer       :page_count
       t.integer       :duration_count
       t.integer       :duration_multiplier
       t.string         :creator, :limit => 30, :null => false

@@ -7,4 +7,8 @@ class ApplicationController < ActionController::Base
 
   # Scrub sensitive parameters from your log
   # filter_parameter_logging :password
+  
+  def find_item
+    @item = Amazon::Ecs.item_lookup(params[:id], {:response_group => 'ItemAttributes'})
+  end
 end
