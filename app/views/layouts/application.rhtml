@@ -9,6 +9,21 @@
   </head>
 
   <body>
-    <%= yield @content %>
+    <div align="center">
+      <div id="site_container" align="left">
+          <div id="header">
+            <span id="site_title"><a href="<%= root_url %>">Verbum Humanum - The Word Of Man</a></span><br/>
+            <span id="site_description">Simple reading plans for any book.</span>
+          </div>
+          
+          <div id="content_container">
+            <%= yield @content %>
+          </div>
+          
+          <div id="footer" align="center">
+            Produced by <a href="http://www.ericfarkas.com">speric</a>
+          </div>
+      </div>
+    </div>
   </body>
 </html>

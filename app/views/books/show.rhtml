@@ -1,8 +1,12 @@
 <%= render :partial => "shared/book_data" %>
 
-<p>Reading Plans</p>
-<% @plans.each do |p| %>
-  <p><%= p.id %></p>
+<% if @plans.empty? %>
+  <strong>No Readings Plans yet</strong>
+<% else %>
+  <p><strong>Reading Plans</strong></p>
+  <% @plans.each do |p| %>
+    <p><a href="<%= reading_plan_path(p.id) %>"><%= pluralize(p.duration_count, p.duration) %> by <%= p.creator %></p>
+  <% end %>
 <% end %>
 
-<a href="<%= new_reading_plan_path(:id => @item.first_item.get('asin')) %>">Create A New Reading Plan</a> 
+<p><strong><a href="<%= new_reading_plan_path(:id => @item.first_item.get('asin')) %>">Create A New Reading Plan</a></strong></p>

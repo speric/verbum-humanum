@@ -1,7 +1,6 @@
+<div style="width: 100%; margin: 100px 0px 150px 0px;" align="center">
 <% form_tag('/home/search') do %>
-  <p>
-    <label>Book Name</label><br/>
-    <%= text_field_tag 'search_term', 'Book name' %>
-  </p>
-  <%= submit_tag 'Search' %>
+  <p><%= text_field_tag 'search_term', 'Book name', {:size => 50, :style => "font-size: 24px;"} %></p>
+  </p><%= submit_tag 'Search', {:style => "font-size: 20px;"} %></p>
 <% end %>
+</div>

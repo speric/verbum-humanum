@@ -11,21 +11,15 @@ a {
   color: #3671a1;
   margin: 0;
   padding: 0;
+  text-decoration: none;
 }
 
-a img {
-  border: 0;
-  padding: 0;
-}
 
-strong {
-  color: #000;
-}
+#site_container{width: 960px; margin: 25px 0px;}
+#site_title{font-size: 36px; font-weight: bold;}
+#content_container{width: 100%; margin-top: 25px;}
+#footer{margin: 50px 0px 25px 0px; width: 100%;}
 
-span.highlight {
-  background-color: #ffcc00;
-  color: #000;
-  padding: 2px;
-  margin: 5px 0;
-}
+label {font-weight: bold; display: block; margin-bottom: -10px;}
+
 

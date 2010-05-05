@@ -1,3 +1,2 @@
-<p><%= @item.first_item.get('title') %></p>
-<p><%= @item.first_item.get('author') %></p>
-<p><%= @item.first_item.get('numberofpages') %></p>
+<p><strong><%= @item.first_item.get('title') %> by <%= @item.first_item.get('author') %></strong><br/>
+<%= @item.first_item.get('numberofpages') %> pages</p>

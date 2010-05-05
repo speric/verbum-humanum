@@ -1,4 +1,5 @@
- <% @items.items.each do |item| %>
+<p><strong>Top 10 Results For "<%= params[:search_term] %>"</strong></p>
+<% @items.items.each do |item| %>
   <% att = item.search_and_convert('itemattributes') %>
-  <p><a href="<%= book_url(item.get('asin')) %>"><%= att.get('title') %> - <%= att.get('author') %></a></p>
- <% end %>
+  <p><a href="<%= book_url(item.get('asin')) %>"><%= att.get('title') %> by <%= att.get('author') %></a></p>
+<% end %>

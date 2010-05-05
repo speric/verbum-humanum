@@ -3,7 +3,7 @@
 <%=  error_messages_for 'reading_plan' %>
 
 <% form_for :reading_plan, @reading_plan, :url => { :action => :create, :id => @item.first_item.get('asin')} do |f| %>
-  <p><label>Duration</label><br/>
+  <p><label>How Fast Do You Want To Read This Book?</label><br/>
     <%= f.text_field :duration_count, {:size => 3} %> 
     <select name="reading_plan[duration_multiplier"] id="reading_plan_duration_multiplier">
       <%= options_for_select([["Days", "1"], ["Week(s)", "7"], ["Month(s)", "30"], ["Years(s)", "365"]]) %>
