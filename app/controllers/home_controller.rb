@@ -1,5 +1,6 @@
 class HomeController < ApplicationController
   def index
+    @latest = ReadingPlan.find(:all, :order => "created_at desc", :limit => 10)
   end
   
   def search

@@ -12,8 +12,8 @@
   
   <p><label>Your Name</label><br/><%= f.text_field :creator %></p>
   <%= f.hidden_field :amazon_asin, {:value => @item.first_item.get('asin') } %> 
-  <%= f.hidden_field :book_author, {:value => @item.first_item.get('title') } %> 
-  <%= f.hidden_field :book_title, {:value => @item.first_item.get('author') } %> 
+  <%= f.hidden_field :book_author, {:value => @item.first_item.get('author') } %> 
+  <%= f.hidden_field :book_title, {:value => @item.first_item.get('title') } %> 
   <%= f.hidden_field :page_count, {:value => @item.first_item.get('numberofpages') } %> 
   <%= submit_tag 'Create' %>
 <% end %>
