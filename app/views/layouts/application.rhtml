@@ -3,27 +3,37 @@
 
   <head>
     <head><title>Verbum Humanum - Easy Reading Plans</title></head>
-    <meta name="description" content="Trusted by millions, Basecamp is the leading web-based project management and collaboration tool. To-dos, files, messages, schedules, and milestones." />
+    <meta name="description" content="Simple reading plans for any book." />
     <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
     <link rel="stylesheet" href="/stylesheets/screen.css" type="text/css" media="screen" />
   </head>
 
   <body>
+    <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-1120529-20']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+    </script>
     <div align="center">
       <div id="site_container" align="left">
           <div id="header">
             <span id="site_title"><a href="<%= root_url %>">Verbum Humanum - The Word Of Man</a></span><br/>
             <span id="site_description">Simple reading plans for any book.</span>
           </div>
-          
           <div id="content_container">
             <%= yield @content %>
           </div>
-          
           <div id="footer" align="center">
             Produced by <a href="http://www.ericfarkas.com">eric farkas</a>
           </div>
       </div>
     </div>
+    
   </body>
 </html>

@@ -2,8 +2,11 @@
 
 The word of man.  In development.
 
-Required gems:
+**Required gems**
 
-*hpricot
+* hpricot
 
-*amazon-ecs
+* amazon-ecs
+
+If you use this app, check `app/views/layous/application.rhtml` and change or delete the Analytics tracking code.
+
