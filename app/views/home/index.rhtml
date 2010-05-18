@@ -1,4 +1,4 @@
-<div style="width: 100%; margin: 100px 0px 150px 0px;" align="center">
+<div style="width: 100%;" align="center">
 <% form_tag('/home/search') do %>
   <p><%= text_field_tag 'search_term', 'Book name', {:size => 50, :style => "font-size: 24px;"} %></p>
   </p><%= submit_tag 'Search', {:style => "font-size: 20px;"} %></p>
@@ -7,7 +7,7 @@
   <div align="left">
     <h3>Latest Plans</h3>
     <% @latest.each do |l| %>
-      <p><a href="<%= reading_plan_path(l.id) %>"><%= l.book_title %> by <%= l.book_author %> (<%= pluralize(l.duration_count, l.duration) %> by <%= l.creator %>)</p>
+      <p><a href="<%= reading_plan_path(l.id) %>"><%= l.book_title %> by <%= l.book_author %> (<%= pluralize(l.duration_count, l.duration) %> by <%= l.creator %>)</a></p>
     <% end %>
   </div>
 </div>
